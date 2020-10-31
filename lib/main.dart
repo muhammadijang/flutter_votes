@@ -84,20 +84,23 @@ class _MyHomePageState extends State<MyHomePage> {
 class Record {
   final String nama;
   final int votes;
+  final int age;
   final String images;
   final DocumentReference reference;
 
   Record.fromMap(Map<String, dynamic> map, {this.reference})
       : assert(map['name'] != null),
         assert(map['votes'] != null),
+        assert(map['age'] != null),
         assert(map['images'] != null),
         nama = map['name'],
         votes = map['votes'],
+        age = map['age'],
         images = map['images'];
 
   Record.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
 
   @override
-  String toString() => "Record<$nama>:$votes:Record<$images>";
+  String toString() => "Record<$nama>:$votes:$age:Record<$images>";
 }
