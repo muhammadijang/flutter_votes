@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pemilihan Presiden 2019'),
+        title: Text('Pemilihan Kepala Daerah 2020'),
       ),
       body: _buildBody(context),
     );
